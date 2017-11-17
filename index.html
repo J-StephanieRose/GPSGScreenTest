@@ -1,15 +1,45 @@
 <!DOCTYPE html> 
 <html> 
 <body> 
-
-<button onclick="getPlaySpeed()" type="button">What is the playback speed?</button>
-<button onclick="setPlaySpeed()" type="button">Set video to be play in slow motion</button><br> 
+  
+<button onclick="setPlaySpeed()" type="button">Start GPSG Fall Formal Screen Test</button><br> 
 
 <video id="myVideo" width="320" height="176" controls>
   <source src="mov_bbb.mp4" type="video/mp4">
   <source src="mov_bbb.ogg" type="video/ogg">
   Your browser does not support HTML5 video.
 </video>
+
+  <div style="text-align:center"> 
+  <button onclick="playPause()">Play/Pause</button> 
+  <button onclick="makeWarhol()">WarholMe</button>
+  <button onclick="makeNormal()">Normal</button>
+  <br><br>
+  <video id="video1" width="420">
+    <source src="mov_bbb.mp4" type="video/mp4">
+    <source src="mov_bbb.ogg" type="video/ogg">
+    Your browser does not support HTML5 video.
+  </video>
+</div> 
+
+<script> 
+var myVideo = document.getElementById("video1"); 
+
+function playPause() { 
+    if (myVideo.paused) 
+        myVideo.play(); 
+    else 
+        myVideo.pause(); 
+} 
+
+function makeWarhol() { 
+    myVideo.width = 560; 
+} 
+
+function makeNormal() { 
+    myVideo.width = 420; 
+} 
+</script> 
 
 <script>
 var vid = document.getElementById("myVideo");
@@ -22,8 +52,13 @@ function setPlaySpeed() {
     vid.playbackRate = 0.05;
 } 
 </script> 
+  <script>
+function myFunction() {
+    alert("The video has started to play");
+}
+</script>
 
-<p>Video courtesy of <a href="https://www.bigbuckbunny.org/" target="_blank">Big Buck Bunny</a>.</p>
+<p>Thanks for taking our screen test!</p>
 
 </body> 
 </html>
