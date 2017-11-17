@@ -1,26 +1,21 @@
 <!DOCTYPE html> 
 <html> 
 <body> 
+<div>   
+  <div style="text-align:center"> 
+  <button onclick="playPause()">Play/Pause</button> 
+  <button onclick="makeWarhol()">WarholMe</button>
+  <button onclick="makeNormal()">Normal</button>
+  <br><br>
+    
+</div> 
   
-<button onclick="setPlaySpeed()" type="button">Start GPSG Fall Formal Screen Test</button><br> 
-
 <video id="myVideo" width="320" height="176" controls>
   <source src="mov_bbb.mp4" type="video/mp4">
   <source src="mov_bbb.ogg" type="video/ogg">
   Your browser does not support HTML5 video.
 </video>
 
-  <div style="text-align:center"> 
-  <button onclick="playPause()">Play/Pause</button> 
-  <button onclick="makeWarhol()">WarholMe</button>
-  <button onclick="makeNormal()">Normal</button>
-  <br><br>
-  <video id="video1" width="420">
-    <source src="mov_bbb.mp4" type="video/mp4">
-    <source src="mov_bbb.ogg" type="video/ogg">
-    Your browser does not support HTML5 video.
-  </video>
-</div> 
 
 <script> 
 var myVideo = document.getElementById("video1"); 
