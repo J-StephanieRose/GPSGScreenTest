@@ -30,8 +30,8 @@
                   
 <div>   
   <div style="text-align:center"> 
-  <button onclick="playPause()">Play/Pause</button> 
-  <button onclick="makeWarhol()">Warhol Me</button>
+  <button onclick="playPause()">Play/Pause</button>
+  <button onclick="setPlaySpeed()" type="button">Warhol Me</button><br>
   <button onclick="makeNormal()">Normal</button>
   <br><br>
     
@@ -48,6 +48,7 @@
 
 
 <script> 
+      
 var myVideo = document.getElementById("video1"); 
 
 function playPause() { 
@@ -83,6 +84,18 @@ function myFunction() {
     alert("You have one minute...MAKE IT COUNT!!!");
 }
 </script>
+      
+ <script>
+var vid = document.getElementById("myVideo");
+
+function getPlaySpeed() { 
+    alert(vid.playbackRate);
+} 
+
+function setPlaySpeed() { 
+    vid.playbackRate = 0.15;
+} 
+</script> 
 
    <h4><center><font color="white">Email Your Screen Test</font></center></h4>
       
